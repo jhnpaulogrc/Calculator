@@ -38,7 +38,6 @@ namespace Calculator
             this.bttn7 = new System.Windows.Forms.Button();
             this.bttn8 = new System.Windows.Forms.Button();
             this.bttn9 = new System.Windows.Forms.Button();
-            this.bttn0 = new System.Windows.Forms.Button();
             this.bttnAdd = new System.Windows.Forms.Button();
             this.bttnSubtract = new System.Windows.Forms.Button();
             this.bttnMultiply = new System.Windows.Forms.Button();
@@ -49,6 +48,7 @@ namespace Calculator
             this.bttnPercent = new System.Windows.Forms.Button();
             this.bttnClear = new System.Windows.Forms.Button();
             this.txtOutput = new System.Windows.Forms.TextBox();
+            this.bttn0 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bttn1
@@ -91,6 +91,7 @@ namespace Calculator
             this.bttn3.TabIndex = 2;
             this.bttn3.Text = "3";
             this.bttn3.UseVisualStyleBackColor = false;
+            this.bttn3.Click += new System.EventHandler(this.bttn3_Click);
             // 
             // bttn4
             // 
@@ -104,6 +105,7 @@ namespace Calculator
             this.bttn4.TabIndex = 3;
             this.bttn4.Text = "4";
             this.bttn4.UseVisualStyleBackColor = false;
+            this.bttn4.Click += new System.EventHandler(this.bttn4_Click);
             // 
             // bttn5
             // 
@@ -117,6 +119,7 @@ namespace Calculator
             this.bttn5.TabIndex = 4;
             this.bttn5.Text = "5";
             this.bttn5.UseVisualStyleBackColor = false;
+            this.bttn5.Click += new System.EventHandler(this.bttn5_Click);
             // 
             // bttn6
             // 
@@ -130,6 +133,7 @@ namespace Calculator
             this.bttn6.TabIndex = 5;
             this.bttn6.Text = "6";
             this.bttn6.UseVisualStyleBackColor = false;
+            this.bttn6.Click += new System.EventHandler(this.bttn6_Click);
             // 
             // bttn7
             // 
@@ -143,6 +147,7 @@ namespace Calculator
             this.bttn7.TabIndex = 6;
             this.bttn7.Text = "7";
             this.bttn7.UseVisualStyleBackColor = false;
+            this.bttn7.Click += new System.EventHandler(this.bttn7_Click);
             // 
             // bttn8
             // 
@@ -156,6 +161,7 @@ namespace Calculator
             this.bttn8.TabIndex = 7;
             this.bttn8.Text = "8";
             this.bttn8.UseVisualStyleBackColor = false;
+            this.bttn8.Click += new System.EventHandler(this.bttn8_Click);
             // 
             // bttn9
             // 
@@ -170,20 +176,6 @@ namespace Calculator
             this.bttn9.Text = "9";
             this.bttn9.UseVisualStyleBackColor = false;
             this.bttn9.Click += new System.EventHandler(this.bttn9_Click);
-            // 
-            // bttn0
-            // 
-            this.bttn0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bttn0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bttn0.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.bttn0.ForeColor = System.Drawing.Color.White;
-            this.bttn0.Location = new System.Drawing.Point(14, 385);
-            this.bttn0.Name = "bttn0";
-            this.bttn0.Size = new System.Drawing.Size(125, 60);
-            this.bttn0.TabIndex = 9;
-            this.bttn0.Text = "0";
-            this.bttn0.UseVisualStyleBackColor = false;
-            this.bttn0.Click += new System.EventHandler(this.button1_Click);
             // 
             // bttnAdd
             // 
@@ -250,6 +242,7 @@ namespace Calculator
             this.bttnPoint.TabIndex = 14;
             this.bttnPoint.Text = ".";
             this.bttnPoint.UseVisualStyleBackColor = false;
+            this.bttnPoint.Click += new System.EventHandler(this.bttnPoint_Click);
             // 
             // bttnNegative
             // 
@@ -307,12 +300,28 @@ namespace Calculator
             this.txtOutput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtOutput.TextChanged += new System.EventHandler(this.txtOutput_TextChanged);
             // 
+            // bttn0
+            // 
+            this.bttn0.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.bttn0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bttn0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bttn0.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bttn0.ForeColor = System.Drawing.Color.White;
+            this.bttn0.Location = new System.Drawing.Point(14, 385);
+            this.bttn0.Name = "bttn0";
+            this.bttn0.Size = new System.Drawing.Size(126, 60);
+            this.bttn0.TabIndex = 20;
+            this.bttn0.Text = "0";
+            this.bttn0.UseVisualStyleBackColor = false;
+            this.bttn0.Click += new System.EventHandler(this.bttn0_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(284, 461);
+            this.Controls.Add(this.bttn0);
             this.Controls.Add(this.txtOutput);
             this.Controls.Add(this.bttnClear);
             this.Controls.Add(this.bttnPercent);
@@ -323,7 +332,6 @@ namespace Calculator
             this.Controls.Add(this.bttnMultiply);
             this.Controls.Add(this.bttnSubtract);
             this.Controls.Add(this.bttnAdd);
-            this.Controls.Add(this.bttn0);
             this.Controls.Add(this.bttn9);
             this.Controls.Add(this.bttn8);
             this.Controls.Add(this.bttn7);
@@ -352,7 +360,6 @@ namespace Calculator
         private System.Windows.Forms.Button bttn7;
         private System.Windows.Forms.Button bttn8;
         private System.Windows.Forms.Button bttn9;
-        private System.Windows.Forms.Button bttn0;
         private System.Windows.Forms.Button bttnAdd;
         private System.Windows.Forms.Button bttnSubtract;
         private System.Windows.Forms.Button bttnMultiply;
@@ -363,6 +370,7 @@ namespace Calculator
         private System.Windows.Forms.Button bttnPercent;
         private System.Windows.Forms.Button bttnClear;
         private System.Windows.Forms.TextBox txtOutput;
+        private System.Windows.Forms.Button bttn0;
     }
 }
 
