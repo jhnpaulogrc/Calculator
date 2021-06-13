@@ -16,6 +16,11 @@ namespace Calculator
         {
             InitializeComponent();
         }
+
+        float numInput;
+        float ans;
+        int count;
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -37,7 +42,7 @@ namespace Calculator
         {
             txtOutput.Text = txtOutput.Text + "2";
         }
-      
+
         private void bttn3_Click(object sender, EventArgs e)
         {
             txtOutput.Text = txtOutput.Text + "3";
@@ -74,7 +79,66 @@ namespace Calculator
 
         private void bttnPoint_Click(object sender, EventArgs e)
         {
-            txtOutput.Text = txtOutput.Text + ".";
+            txtOutput.Text = ".";
+        }
+
+        private void generateInput()
+        {
+            numInput = float.Parse(txtOutput.Text);
+            txtOutput.Clear();
+        }
+
+        private void bttnAdd_Click(object sender, EventArgs e)
+        {
+            generateInput();
+            count = 1;
+        }
+       
+        private void bttnSubtract_Click(object sender, EventArgs e)
+        {
+            generateInput();
+            count = 2;
+        }
+
+        private void bttnMultiply_Click(object sender, EventArgs e)
+        {
+            generateInput();
+            count = 3;
+        }
+
+        private void bttnDivide_Click(object sender, EventArgs e)
+        {
+            generateInput();
+            count = 4;
+        }
+
+        private void compute(int count)
+        {
+            switch (count)
+            {
+                case 1:
+                    ans = numInput + float.Parse(txtOutput.Text);
+                    txtOutput.Text = ans.ToString();
+                    break;
+                case 2:
+                    ans = numInput - float.Parse(txtOutput.Text);
+                    txtOutput.Text = ans.ToString();
+                    break;
+                case 3:
+                    ans = numInput * float.Parse(txtOutput.Text);
+                    txtOutput.Text = ans.ToString();
+                    break;
+                case 4:
+                    ans = numInput / float.Parse(txtOutput.Text);
+                    txtOutput.Text = ans.ToString();
+                    break;
+                    default:
+                    break;
+            }
+        }
+        private void bttnEqual_Click(object sender, EventArgs e)
+        {
+         compute(count);   
         }
     }
 }
