@@ -257,6 +257,7 @@ namespace Calculator
             this.bttnNegative.TabIndex = 15;
             this.bttnNegative.Text = "±";
             this.bttnNegative.UseVisualStyleBackColor = true;
+            this.bttnNegative.Click += new System.EventHandler(this.bttnNegative_Click);
             // 
             // bttnEqual
             // 
@@ -281,6 +282,7 @@ namespace Calculator
             this.bttnPercent.TabIndex = 17;
             this.bttnPercent.Text = "%";
             this.bttnPercent.UseVisualStyleBackColor = true;
+            this.bttnPercent.Click += new System.EventHandler(this.bttnPercent_Click);
             // 
             // bttnClear
             // 
@@ -291,6 +293,7 @@ namespace Calculator
             this.bttnClear.TabIndex = 18;
             this.bttnClear.Text = "C";
             this.bttnClear.UseVisualStyleBackColor = true;
+            this.bttnClear.Click += new System.EventHandler(this.bttnClear_Click);
             // 
             // txtOutput
             // 

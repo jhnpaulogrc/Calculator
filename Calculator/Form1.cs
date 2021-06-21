@@ -79,7 +79,14 @@ namespace Calculator
 
         private void bttnPoint_Click(object sender, EventArgs e)
         {
-            txtOutput.Text = ".";
+            if (txtOutput.Text.Contains(".")==false)
+            {
+                txtOutput.Text = txtOutput.Text + ".";
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void generateInput()
@@ -111,7 +118,7 @@ namespace Calculator
             generateInput();
             count = 4;
         }
-
+    
         private void compute(int count)
         {
             switch (count)
@@ -140,5 +147,38 @@ namespace Calculator
         {
          compute(count);   
         }
+
+        private void bttnClear_Click(object sender, EventArgs e)
+        {
+          txtOutput.Clear();
+        }
+
+        private void bttnNegative_Click(object sender, EventArgs e)
+        {
+            if (txtOutput.Text.Contains("-") == false)
+            {
+                txtOutput.Text = "-" + txtOutput.Text ;
+                numInput = float.Parse(txtOutput.Text);
+            }
+            else
+            {
+                txtOutput.Text = txtOutput.Text;
+                numInput = float.Parse(txtOutput.Text);
+            }
+        }
+        private void bttnPercent_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                numInput = float.Parse(txtOutput.Text);
+                ans = numInput / 100;
+                txtOutput.Text = ans.ToString();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
     }
 }
