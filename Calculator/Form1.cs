@@ -155,14 +155,13 @@ namespace Calculator
 
         private void bttnNegative_Click(object sender, EventArgs e)
         {
-            if (txtOutput.Text.Contains("-") == false)
+            if (txtOutput.Text.StartsWith("-"))
             {
-                txtOutput.Text = "-" + txtOutput.Text ;
-                numInput = float.Parse(txtOutput.Text);
+                txtOutput.Text = txtOutput.Text.Substring(1);
             }
-            else
+            else if (txtOutput.Text != "0")
             {
-                txtOutput.Text = txtOutput.Text;
+                txtOutput.Text = "-" + txtOutput.Text;
                 numInput = float.Parse(txtOutput.Text);
             }
         }
@@ -176,7 +175,7 @@ namespace Calculator
             }
             catch (Exception)
             {
-                throw;
+                
             }
         }
 
