@@ -370,6 +370,7 @@ namespace Calculator
             this.bttnSqrt.TabIndex = 24;
             this.bttnSqrt.Text = "√";
             this.bttnSqrt.UseVisualStyleBackColor = true;
+            this.bttnSqrt.Click += new System.EventHandler(this.bttnSqrt_Click);
             // 
             // bttnFraction
             // 
@@ -380,6 +381,7 @@ namespace Calculator
             this.bttnFraction.TabIndex = 25;
             this.bttnFraction.Text = "1/x";
             this.bttnFraction.UseVisualStyleBackColor = true;
+            this.bttnFraction.Click += new System.EventHandler(this.bttnFraction_Click);
             // 
             // bttnClearEntry
             // 
@@ -390,6 +392,7 @@ namespace Calculator
             this.bttnClearEntry.TabIndex = 26;
             this.bttnClearEntry.Text = "CE";
             this.bttnClearEntry.UseVisualStyleBackColor = true;
+            this.bttnClearEntry.Click += new System.EventHandler(this.bttnClearEntry_Click);
             // 
             // bttnSquared
             // 
@@ -400,6 +403,7 @@ namespace Calculator
             this.bttnSquared.TabIndex = 27;
             this.bttnSquared.Text = "x²";
             this.bttnSquared.UseVisualStyleBackColor = true;
+            this.bttnSquared.Click += new System.EventHandler(this.bttnSquared_Click);
             // 
             // bttnDelete
             // 
@@ -413,6 +417,7 @@ namespace Calculator
             this.bttnDelete.TabIndex = 28;
             this.bttnDelete.Text = " ⇤";
             this.bttnDelete.UseVisualStyleBackColor = false;
+            this.bttnDelete.Click += new System.EventHandler(this.bttnDelete_Click);
             // 
             // Form1
             // 

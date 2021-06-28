@@ -121,27 +121,35 @@ namespace Calculator
     
         private void compute(int count)
         {
-            switch (count)
+            try
             {
-                case 1:
-                    ans = numInput + float.Parse(txtOutput.Text);
-                    txtOutput.Text = ans.ToString();
-                    break;
-                case 2:
-                    ans = numInput - float.Parse(txtOutput.Text);
-                    txtOutput.Text = ans.ToString();
-                    break;
-                case 3:
-                    ans = numInput * float.Parse(txtOutput.Text);
-                    txtOutput.Text = ans.ToString();
-                    break;
-                case 4:
-                    ans = numInput / float.Parse(txtOutput.Text);
-                    txtOutput.Text = ans.ToString();
-                    break;
+                switch (count)
+                {
+                    case 1:
+                        ans = numInput + float.Parse(txtOutput.Text);
+                        txtOutput.Text = ans.ToString();
+                        break;
+                    case 2:
+                        ans = numInput - float.Parse(txtOutput.Text);
+                        txtOutput.Text = ans.ToString();
+                        break;
+                    case 3:
+                        ans = numInput * float.Parse(txtOutput.Text);
+                        txtOutput.Text = ans.ToString();
+                        break;
+                    case 4:
+                        ans = numInput / float.Parse(txtOutput.Text);
+                        txtOutput.Text = ans.ToString();
+                        break;
                     default:
-                    break;
+                        break;
+                }
             }
+            catch (Exception)
+            {
+
+            }
+           
         }
         private void bttnEqual_Click(object sender, EventArgs e)
         {
@@ -151,6 +159,19 @@ namespace Calculator
         private void bttnClear_Click(object sender, EventArgs e)
         {
           txtOutput.Clear();
+            float numInput = 0;
+            float ans = 0;
+        }
+        private void bttnClearEntry_Click(object sender, EventArgs e)
+        {
+            txtOutput.Clear();
+        }
+        private void bttnDelete_Click(object sender, EventArgs e)
+        {
+            if (txtOutput.TextLength > 0)
+            {
+                txtOutput.Text = txtOutput.Text.Remove(txtOutput.TextLength - 1, 1);
+            }
         }
 
         private void bttnNegative_Click(object sender, EventArgs e)
@@ -178,6 +199,19 @@ namespace Calculator
                 
             }
         }
+        private void bttnSqrt_Click(object sender, EventArgs e)
+        {
+            txtOutput.Text = Math.Sqrt(float.Parse(txtOutput.Text)).ToString();
+        }
 
+        private void bttnFraction_Click(object sender, EventArgs e)
+        {
+            txtOutput.Text = (1/(float.Parse(txtOutput.Text))).ToString();
+        }
+
+        private void bttnSquared_Click(object sender, EventArgs e)
+        {
+            txtOutput.Text = Math.Pow(float.Parse(txtOutput.Text), 2).ToString();
+        }
     }
 }
