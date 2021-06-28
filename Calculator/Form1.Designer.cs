@@ -301,7 +301,7 @@ namespace Calculator
             this.txtOutput.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtOutput.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtOutput.ForeColor = System.Drawing.Color.White;
-            this.txtOutput.Location = new System.Drawing.Point(14, 72);
+            this.txtOutput.Location = new System.Drawing.Point(14, 12);
             this.txtOutput.Name = "txtOutput";
             this.txtOutput.Size = new System.Drawing.Size(258, 43);
             this.txtOutput.TabIndex = 19;
