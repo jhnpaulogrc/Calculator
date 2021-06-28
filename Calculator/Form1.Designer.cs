@@ -49,7 +49,14 @@ namespace Calculator
             this.bttnClear = new System.Windows.Forms.Button();
             this.txtOutput = new System.Windows.Forms.TextBox();
             this.bttn0 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bttnMC = new System.Windows.Forms.Button();
+            this.bttnMR = new System.Windows.Forms.Button();
+            this.bttnMS = new System.Windows.Forms.Button();
+            this.bttnSqrt = new System.Windows.Forms.Button();
+            this.bttnFraction = new System.Windows.Forms.Button();
+            this.bttnClearEntry = new System.Windows.Forms.Button();
+            this.bttnSquared = new System.Windows.Forms.Button();
+            this.bttnDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bttn1
@@ -184,7 +191,7 @@ namespace Calculator
             this.bttnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bttnAdd.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bttnAdd.ForeColor = System.Drawing.Color.White;
-            this.bttnAdd.Location = new System.Drawing.Point(211, 334);
+            this.bttnAdd.Location = new System.Drawing.Point(277, 334);
             this.bttnAdd.Name = "bttnAdd";
             this.bttnAdd.Size = new System.Drawing.Size(60, 60);
             this.bttnAdd.TabIndex = 10;
@@ -198,7 +205,7 @@ namespace Calculator
             this.bttnSubtract.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bttnSubtract.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bttnSubtract.ForeColor = System.Drawing.Color.White;
-            this.bttnSubtract.Location = new System.Drawing.Point(211, 268);
+            this.bttnSubtract.Location = new System.Drawing.Point(277, 268);
             this.bttnSubtract.Name = "bttnSubtract";
             this.bttnSubtract.Size = new System.Drawing.Size(60, 60);
             this.bttnSubtract.TabIndex = 11;
@@ -212,7 +219,7 @@ namespace Calculator
             this.bttnMultiply.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bttnMultiply.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bttnMultiply.ForeColor = System.Drawing.Color.White;
-            this.bttnMultiply.Location = new System.Drawing.Point(211, 202);
+            this.bttnMultiply.Location = new System.Drawing.Point(277, 202);
             this.bttnMultiply.Name = "bttnMultiply";
             this.bttnMultiply.Size = new System.Drawing.Size(60, 60);
             this.bttnMultiply.TabIndex = 12;
@@ -227,7 +234,7 @@ namespace Calculator
             this.bttnDivide.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bttnDivide.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bttnDivide.ForeColor = System.Drawing.Color.White;
-            this.bttnDivide.Location = new System.Drawing.Point(211, 136);
+            this.bttnDivide.Location = new System.Drawing.Point(277, 136);
             this.bttnDivide.Name = "bttnDivide";
             this.bttnDivide.Size = new System.Drawing.Size(60, 60);
             this.bttnDivide.TabIndex = 13;
@@ -252,7 +259,7 @@ namespace Calculator
             // bttnNegative
             // 
             this.bttnNegative.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.bttnNegative.Location = new System.Drawing.Point(79, 136);
+            this.bttnNegative.Location = new System.Drawing.Point(145, 136);
             this.bttnNegative.Name = "bttnNegative";
             this.bttnNegative.Size = new System.Drawing.Size(60, 60);
             this.bttnNegative.TabIndex = 15;
@@ -268,7 +275,7 @@ namespace Calculator
             this.bttnEqual.ForeColor = System.Drawing.Color.White;
             this.bttnEqual.Location = new System.Drawing.Point(211, 400);
             this.bttnEqual.Name = "bttnEqual";
-            this.bttnEqual.Size = new System.Drawing.Size(60, 60);
+            this.bttnEqual.Size = new System.Drawing.Size(126, 60);
             this.bttnEqual.TabIndex = 16;
             this.bttnEqual.Text = "=";
             this.bttnEqual.UseVisualStyleBackColor = false;
@@ -277,7 +284,7 @@ namespace Calculator
             // bttnPercent
             // 
             this.bttnPercent.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.bttnPercent.Location = new System.Drawing.Point(145, 136);
+            this.bttnPercent.Location = new System.Drawing.Point(211, 136);
             this.bttnPercent.Name = "bttnPercent";
             this.bttnPercent.Size = new System.Drawing.Size(60, 60);
             this.bttnPercent.TabIndex = 17;
@@ -302,9 +309,9 @@ namespace Calculator
             this.txtOutput.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtOutput.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtOutput.ForeColor = System.Drawing.Color.White;
-            this.txtOutput.Location = new System.Drawing.Point(14, 12);
+            this.txtOutput.Location = new System.Drawing.Point(14, 21);
             this.txtOutput.Name = "txtOutput";
-            this.txtOutput.Size = new System.Drawing.Size(258, 43);
+            this.txtOutput.Size = new System.Drawing.Size(323, 43);
             this.txtOutput.TabIndex = 19;
             this.txtOutput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtOutput.TextChanged += new System.EventHandler(this.txtOutput_TextChanged);
@@ -324,23 +331,103 @@ namespace Calculator
             this.bttn0.UseVisualStyleBackColor = false;
             this.bttn0.Click += new System.EventHandler(this.bttn0_Click);
             // 
-            // button1
+            // bttnMC
             // 
-            this.button1.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(14, 70);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 60);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "C";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bttnMC.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bttnMC.Location = new System.Drawing.Point(12, 70);
+            this.bttnMC.Name = "bttnMC";
+            this.bttnMC.Size = new System.Drawing.Size(60, 60);
+            this.bttnMC.TabIndex = 21;
+            this.bttnMC.Text = "MC";
+            this.bttnMC.UseVisualStyleBackColor = true;
+            // 
+            // bttnMR
+            // 
+            this.bttnMR.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bttnMR.Location = new System.Drawing.Point(79, 70);
+            this.bttnMR.Name = "bttnMR";
+            this.bttnMR.Size = new System.Drawing.Size(60, 60);
+            this.bttnMR.TabIndex = 22;
+            this.bttnMR.Text = "MR";
+            this.bttnMR.UseVisualStyleBackColor = true;
+            // 
+            // bttnMS
+            // 
+            this.bttnMS.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bttnMS.Location = new System.Drawing.Point(145, 70);
+            this.bttnMS.Name = "bttnMS";
+            this.bttnMS.Size = new System.Drawing.Size(60, 60);
+            this.bttnMS.TabIndex = 23;
+            this.bttnMS.Text = "MS";
+            this.bttnMS.UseVisualStyleBackColor = true;
+            // 
+            // bttnSqrt
+            // 
+            this.bttnSqrt.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bttnSqrt.Location = new System.Drawing.Point(211, 202);
+            this.bttnSqrt.Name = "bttnSqrt";
+            this.bttnSqrt.Size = new System.Drawing.Size(60, 60);
+            this.bttnSqrt.TabIndex = 24;
+            this.bttnSqrt.Text = "√";
+            this.bttnSqrt.UseVisualStyleBackColor = true;
+            // 
+            // bttnFraction
+            // 
+            this.bttnFraction.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bttnFraction.Location = new System.Drawing.Point(211, 268);
+            this.bttnFraction.Name = "bttnFraction";
+            this.bttnFraction.Size = new System.Drawing.Size(60, 60);
+            this.bttnFraction.TabIndex = 25;
+            this.bttnFraction.Text = "1/x";
+            this.bttnFraction.UseVisualStyleBackColor = true;
+            // 
+            // bttnClearEntry
+            // 
+            this.bttnClearEntry.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bttnClearEntry.Location = new System.Drawing.Point(79, 136);
+            this.bttnClearEntry.Name = "bttnClearEntry";
+            this.bttnClearEntry.Size = new System.Drawing.Size(60, 60);
+            this.bttnClearEntry.TabIndex = 26;
+            this.bttnClearEntry.Text = "CE";
+            this.bttnClearEntry.UseVisualStyleBackColor = true;
+            // 
+            // bttnSquared
+            // 
+            this.bttnSquared.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bttnSquared.Location = new System.Drawing.Point(211, 334);
+            this.bttnSquared.Name = "bttnSquared";
+            this.bttnSquared.Size = new System.Drawing.Size(60, 60);
+            this.bttnSquared.TabIndex = 27;
+            this.bttnSquared.Text = "x²";
+            this.bttnSquared.UseVisualStyleBackColor = true;
+            // 
+            // bttnDelete
+            // 
+            this.bttnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bttnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bttnDelete.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bttnDelete.ForeColor = System.Drawing.Color.White;
+            this.bttnDelete.Location = new System.Drawing.Point(211, 70);
+            this.bttnDelete.Name = "bttnDelete";
+            this.bttnDelete.Size = new System.Drawing.Size(126, 60);
+            this.bttnDelete.TabIndex = 28;
+            this.bttnDelete.Text = " ⇤";
+            this.bttnDelete.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(284, 470);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(349, 470);
+            this.Controls.Add(this.bttnDelete);
+            this.Controls.Add(this.bttnSquared);
+            this.Controls.Add(this.bttnClearEntry);
+            this.Controls.Add(this.bttnFraction);
+            this.Controls.Add(this.bttnSqrt);
+            this.Controls.Add(this.bttnMS);
+            this.Controls.Add(this.bttnMR);
+            this.Controls.Add(this.bttnMC);
             this.Controls.Add(this.bttn0);
             this.Controls.Add(this.txtOutput);
             this.Controls.Add(this.bttnClear);
@@ -391,7 +478,14 @@ namespace Calculator
         private System.Windows.Forms.Button bttnClear;
         private System.Windows.Forms.TextBox txtOutput;
         private System.Windows.Forms.Button bttn0;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bttnMC;
+        private System.Windows.Forms.Button bttnMR;
+        private System.Windows.Forms.Button bttnMS;
+        private System.Windows.Forms.Button bttnSqrt;
+        private System.Windows.Forms.Button bttnFraction;
+        private System.Windows.Forms.Button bttnClearEntry;
+        private System.Windows.Forms.Button bttnSquared;
+        private System.Windows.Forms.Button bttnDelete;
     }
 }
 
