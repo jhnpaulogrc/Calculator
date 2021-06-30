@@ -20,8 +20,10 @@ namespace Calculator
         float numInput;
         float ans;
         int count;
-        
-        
+        float ansMS;
+        bool enterVal;
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
             bttnMR.Enabled = false;
@@ -33,7 +35,15 @@ namespace Calculator
         }
         private void AppendDisplay(String number)
         {
-            txtOutput.Text += number;
+            if (txtOutput.Text=="0"||enterVal == true)
+            {
+                txtOutput.Text = number;
+                enterVal = false;
+            }
+            else
+            {
+                txtOutput.Text += number;
+            }
         }
         private void bttn0_Click(object sender, EventArgs e)
         {
@@ -85,7 +95,7 @@ namespace Calculator
 
         private void bttnPoint_Click(object sender, EventArgs e)
         {
-            if (txtOutput.Text.Contains(".")==false)
+            if (txtOutput.Text.Contains(".") == false)
             {
                 txtOutput.Text = txtOutput.Text + ".";
             }
@@ -159,18 +169,19 @@ namespace Calculator
         }
         private void bttnEqual_Click(object sender, EventArgs e)
         {
+         enterVal = true;
          compute(count);   
         }
 
         private void bttnClear_Click(object sender, EventArgs e)
         {
-          txtOutput.Clear();
+            txtOutput.Text = "0";
             float numInput = 0;
             float ans = 0;
         }
         private void bttnClearEntry_Click(object sender, EventArgs e)
         {
-            txtOutput.Clear();
+            txtOutput.Text = "0";
         }
         private void bttnDelete_Click(object sender, EventArgs e)
         {
@@ -222,15 +233,23 @@ namespace Calculator
 
         private void bttnMS_Click(object sender, EventArgs e)
         {
-            float ansMS = float.Parse(txtOutput.Text);
             bttnMR.Enabled = true;
             bttnMC.Enabled = true;
+            ansMS = float.Parse(txtOutput.Text);
+            enterVal = true;
         }
 
         private void bttnMR_Click(object sender, EventArgs e)
         {
-            float ansMS = float.Parse(txtOutput.Text);
             txtOutput.Text = ansMS.ToString();
+        }
+
+        private void bttnMC_Click(object sender, EventArgs e)
+        {
+            bttnMR.Enabled = false;
+            bttnMC.Enabled = false;
+            ansMS = 0;
+            enterVal = true;
         }
     }
 }

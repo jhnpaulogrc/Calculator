@@ -313,6 +313,7 @@ namespace Calculator
             this.txtOutput.Name = "txtOutput";
             this.txtOutput.Size = new System.Drawing.Size(323, 43);
             this.txtOutput.TabIndex = 19;
+            this.txtOutput.Text = "0";
             this.txtOutput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtOutput.TextChanged += new System.EventHandler(this.txtOutput_TextChanged);
             // 
@@ -340,6 +341,7 @@ namespace Calculator
             this.bttnMC.TabIndex = 21;
             this.bttnMC.Text = "MC";
             this.bttnMC.UseVisualStyleBackColor = true;
+            this.bttnMC.Click += new System.EventHandler(this.bttnMC_Click);
             // 
             // bttnMR
             // 
