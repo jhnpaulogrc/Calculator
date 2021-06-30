@@ -350,6 +350,7 @@ namespace Calculator
             this.bttnMR.TabIndex = 22;
             this.bttnMR.Text = "MR";
             this.bttnMR.UseVisualStyleBackColor = true;
+            this.bttnMR.Click += new System.EventHandler(this.bttnMR_Click);
             // 
             // bttnMS
             // 
@@ -360,6 +361,7 @@ namespace Calculator
             this.bttnMS.TabIndex = 23;
             this.bttnMS.Text = "MS";
             this.bttnMS.UseVisualStyleBackColor = true;
+            this.bttnMS.Click += new System.EventHandler(this.bttnMS_Click);
             // 
             // bttnSqrt
             // 

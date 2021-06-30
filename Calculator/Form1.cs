@@ -20,61 +20,67 @@ namespace Calculator
         float numInput;
         float ans;
         int count;
-
+        
+        
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            bttnMR.Enabled = false;
+            bttnMC.Enabled = false;
         }
         private void txtOutput_TextChanged(object sender, EventArgs e)
         {
 
         }
+        private void AppendDisplay(String number)
+        {
+            txtOutput.Text += number;
+        }
         private void bttn0_Click(object sender, EventArgs e)
         {
-            txtOutput.Text = txtOutput.Text + "0";
+            AppendDisplay("0");
         }
         private void bttn1_Click(object sender, EventArgs e)
         {
-            txtOutput.Text = txtOutput.Text + "1";
+            AppendDisplay("1");
         }
 
         private void bttn2_Click(object sender, EventArgs e)
         {
-            txtOutput.Text = txtOutput.Text + "2";
+            AppendDisplay("2");
         }
 
         private void bttn3_Click(object sender, EventArgs e)
         {
-            txtOutput.Text = txtOutput.Text + "3";
+            AppendDisplay("3");
         }
 
         private void bttn4_Click(object sender, EventArgs e)
         {
-            txtOutput.Text = txtOutput.Text + "4";
+            AppendDisplay("4");
         }
 
         private void bttn5_Click(object sender, EventArgs e)
         {
-            txtOutput.Text = txtOutput.Text + "5";
+            AppendDisplay("5");
         }
 
         private void bttn6_Click(object sender, EventArgs e)
         {
-            txtOutput.Text = txtOutput.Text + "6";
+            AppendDisplay("6");
         }
 
         private void bttn7_Click(object sender, EventArgs e)
         {
-            txtOutput.Text = txtOutput.Text + "7";
+            AppendDisplay("7");
         }
 
         private void bttn8_Click(object sender, EventArgs e)
         {
-            txtOutput.Text = txtOutput.Text + "8";
+            AppendDisplay("8");
         }
         private void bttn9_Click(object sender, EventArgs e)
         {
-            txtOutput.Text = txtOutput.Text + "9";
+            AppendDisplay("9");
         }
 
         private void bttnPoint_Click(object sender, EventArgs e)
@@ -212,6 +218,19 @@ namespace Calculator
         private void bttnSquared_Click(object sender, EventArgs e)
         {
             txtOutput.Text = Math.Pow(float.Parse(txtOutput.Text), 2).ToString();
+        }
+
+        private void bttnMS_Click(object sender, EventArgs e)
+        {
+            float ansMS = float.Parse(txtOutput.Text);
+            bttnMR.Enabled = true;
+            bttnMC.Enabled = true;
+        }
+
+        private void bttnMR_Click(object sender, EventArgs e)
+        {
+            float ansMS = float.Parse(txtOutput.Text);
+            txtOutput.Text = ansMS.ToString();
         }
     }
 }
